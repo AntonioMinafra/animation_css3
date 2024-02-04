@@ -1,0 +1,56 @@
+body {
+    margin: 0px;
+}
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.planetOrbit {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #187bcd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.planet {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation-name: orbit;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border: 4px solid #333 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes orbit {
+    from {transform: rotate(0deg) translate(100px) rotate(0deg);}
+    to {transform: rotate(-360deg) translate(100px) rotate(360deg);}
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    background-color: #187bcd;
+    border:4px solid #333;
+    border-radius: 50%;
+    animation-name: orbitMoon;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes orbitMoon {
+    from {transform: rotate(0deg) translate(60px) rotate(0deg);}
+    to {transform: rotate(-360deg) translate(60px) rotate(360deg);}
+}
